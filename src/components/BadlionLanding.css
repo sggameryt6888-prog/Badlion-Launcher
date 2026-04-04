@@ -1,0 +1,57 @@
+.badlion-landing {
+    background: linear-gradient(to right, #4D4D4D, #7A7A7A);
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.badlion-landing h1 {
+    color: #FFFFFF;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: fadeIn 2s ease;
+}
+
+.badlion-landing p {
+    color: #EDEDED;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease 0.5s;
+}
+
+.badlion-landing button {
+    background-color: #D3D3D3;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.badlion-landing button:hover {
+    background-color: #B0B0B0;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .badlion-landing h1 {
+        font-size: 2.5em;
+    }
+    .badlion-landing p {
+        font-size: 1em;
+    }
+    .badlion-landing button {
+        padding: 8px 16px;
+    }
+}
