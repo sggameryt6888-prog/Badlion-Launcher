@@ -1,276 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badlion Launcher | Next-Gen Minecraft</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --deep-blue: #0A1F44;
-            --neon-yellow: #FFD700;
-        }
-        body {
-            font-family: 'Sora', sans-serif;
-            background-color: #050b18;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Glowing Effects */
-        .glow-yellow {
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-            transition: all 0.3s ease;
-        }
-        .glow-yellow:hover {
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
-            transform: translateY(-3px);
-        }
-        .glow-blue-outline {
-            border: 2px solid #3b82f6;
-            box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.2);
-        }
-        .glow-blue-outline:hover {
-            background: rgba(59, 130, 246, 0.1);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
-        }
-
-        /* Hero Animation */
-        .float {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Gradient Text */
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #FFD700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Navbar Transition */
-        nav.scrolled {
-            background: rgba(10, 31, 68, 0.95);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Badlion Launcher</title>
 </head>
 <body>
-
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-8 py-6">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#FFD700] rounded-xl flex items-center justify-center glow-yellow">
-                    <i data-lucide="zap" class="text-[#0A1F44] w-6 h-6"></i>
-                </div>
-                <span class="text-2xl font-extrabold tracking-tighter uppercase italic">Badlion</span>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-10 text-sm font-semibold uppercase tracking-widest">
-                <a href="#hero" class="hover:text-[#FFD700] transition-colors">Home</a>
-                <a href="#features" class="hover:text-[#FFD700] transition-colors">Features</a>
-                <a href="#screenshots" class="hover:text-[#FFD700] transition-colors">Screenshots</a>
-                <a href="#download" class="hover:text-[#FFD700] transition-colors">Download</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <a href="https://youtube.com/@nekostrikesg?si=8S9UV6yqw45oSlNg" target="_blank" class="hover:text-[#FFD700] transition-transform hover:scale-110"><i data-lucide="youtube"></i></a>
-                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="hover:text-[#FFD700] transition-transform hover:scale-110"><i data-lucide="message-square"></i></a>
-            </div>
-        </div>
+    <nav class="navbar">
+        <div class="logo">Badlion Launcher</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#community">Community</a></li>
+        </ul>
     </nav>
-
-    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 scale-110"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#050b18] via-transparent to-[#050b18]"></div>
-
-        <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
-            <div class="float inline-block mb-6 px-4 py-1 rounded-full border border-[#FFD700]/30 bg-[#FFD700]/10 text-[#FFD700] text-xs font-bold tracking-widest uppercase">
-                Premium Minecraft Experience
-            </div>
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-gradient mb-4">BADLION</h1>
-            <p class="text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-light tracking-wide">
-                Fast, clean and simple launcher for <span class="text-white font-semibold">Vanilla & Fabric</span>.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-[#FFD700] text-[#0A1F44] rounded-2xl font-extrabold text-lg glow-yellow flex items-center justify-center gap-3">
-                    <i data-lucide="download-cloud"></i> Download for PC
-                </a>
-                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-transparent text-white rounded-2xl font-extrabold text-lg glow-blue-outline flex items-center justify-center gap-3 transition-all">
-                    <i data-lucide="smartphone"></i> Download APK
-                </a>
-            </div>
-        </div>
-
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+    <section id="hero" class="hero">
+        <h1>Welcome to Badlion Launcher</h1>
+        <p>Your gateway to the ultimate Minecraft experience.</p>
+    </section>
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">Feature 1</div>
+            <div class="feature-card">Feature 2</div>
+            <div class="feature-card">Feature 3</div>
+            <div class="feature-card">Feature 4</div>
         </div>
     </section>
-
-    <section id="features" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Engineered for <span class="text-[#FFD700]">Speed</span></h2>
-            <div class="h-1 w-20 bg-[#FFD700] mx-auto rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-3xl hover:border-[#FFD700]/50 transition-all duration-500 group" data-aos="fade-right">
-                <div class="w-16 h-16 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="zap" class="text-[#FFD700] w-8 h-8"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Fast Launcher</h3>
-                <p class="text-gray-400 leading-relaxed text-lg">Instant startup sequences and optimized game loading assets to get you in the game in seconds.</p>
-            </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition-all duration-500 group" data-aos="fade-left">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="layout" class="text-blue-400 w-8 h-8"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Easy to Use</h3>
-                <p class="text-gray-400 leading-relaxed text-lg">A clean, distraction-free interface designed for both beginners and professional PvP players.</p>
-            </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition-all duration-500 group" data-aos="fade-right">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="box" class="text-blue-400 w-8 h-8"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Fabric Support</h3>
-                <p class="text-gray-400 leading-relaxed text-lg">Seamless integration for Fabric mods. Boost your FPS and enhance your gameplay with one click.</p>
-            </div>
-            <div class="glass p-10 rounded-3xl hover:border-[#FFD700]/50 transition-all duration-500 group" data-aos="fade-left">
-                <div class="w-16 h-16 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="monitor" class="text-[#FFD700] w-8 h-8"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Cross Platform</h3>
-                <p class="text-gray-400 leading-relaxed text-lg">Available on Windows and Android. Take your premium Minecraft experience wherever you go.</p>
-            </div>
+    <section id="gallery" class="gallery">
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+            <img src="screenshot1.jpg" alt="Screenshot 1" />
+            <img src="screenshot2.jpg" alt="Screenshot 2" />
+            <img src="screenshot3.jpg" alt="Screenshot 3" />
         </div>
     </section>
-
-    <section id="screenshots" class="py-32 bg-[#0A1F44]/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Visual <span class="text-[#FFD700]">Integrity</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl" data-aos="zoom-in">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" alt="UI Screenshot">
-                </div>
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" alt="UI Screenshot">
-                </div>
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" alt="UI Screenshot">
-                </div>
-            </div>
-        </div>
+    <section id="download" class="download">
+        <h2>Download</h2>
+        <p>Click the button below to download the Badlion Launcher.</p>
+        <a href="#" class="download-button">Download Now</a>
     </section>
-
-    <section id="download" class="py-32 text-center px-6">
-        <div class="max-w-3xl mx-auto glass p-16 rounded-[3rem] border-[#FFD700]/20" data-aos="flip-up">
-            <h2 class="text-5xl font-black mb-6">DOWNLOAD NOW</h2>
-            <p class="text-gray-400 mb-12 text-lg">Experience Minecraft the way it was meant to be played. Lightweight, powerful, and free.</p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <button class="px-12 py-5 bg-[#FFD700] text-[#0A1F44] rounded-2xl font-black text-xl glow-yellow transition-all uppercase tracking-tighter">
-                    Windows
-                </button>
-                <button class="px-12 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-black text-xl hover:bg-white hover:text-black transition-all uppercase tracking-tighter">
-                    Android APK
-                </button>
-            </div>
-            <p class="mt-8 text-xs text-gray-500 uppercase tracking-widest">Free and lightweight launcher • Version 1.2.0</p>
-        </div>
+    <section id="community" class="community">
+        <h2>Join our Community</h2>
+        <a href="https://www.youtube.com/c/example" class="community-link">YouTube</a>
+        <a href="https://discord.gg/example" class="community-link">Discord</a>
     </section>
-
-    <section id="about" class="py-20 text-center max-w-2xl mx-auto px-6" data-aos="fade-up">
-        <h3 class="text-2xl font-bold mb-4 italic">Speed & Simplicity</h3>
-        <p class="text-gray-400 leading-relaxed italic">
-            "A minimal Minecraft launcher built for speed and simplicity. We remove the clutter so you can focus on the blocks."
-        </p>
-    </section>
-
-    <section id="community" class="py-32 bg-[#FFD700]/5 border-y border-[#FFD700]/10">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-12 uppercase italic">Join the Community</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <a href="https://youtube.com/@nekostrikesg?si=8S9UV6yqw45oSlNg" target="_blank" class="glass px-10 py-6 rounded-3xl flex items-center gap-6 hover:border-red-500/50 transition-all group">
-                    <i data-lucide="youtube" class="w-10 h-10 text-red-500 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-left">
-                        <span class="block text-xs text-gray-500 font-bold uppercase tracking-widest">Subscribe on</span>
-                        <span class="text-xl font-bold">YouTube</span>
-                    </div>
-                </a>
-                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="glass px-10 py-6 rounded-3xl flex items-center gap-6 hover:border-indigo-500/50 transition-all group">
-                    <i data-lucide="message-square" class="w-10 h-10 text-indigo-400 group-hover:scale-110 transition-transform"></i>
-                    <div class="text-left">
-                        <span class="block text-xs text-gray-500 font-bold uppercase tracking-widest">Connect on</span>
-                        <span class="text-xl font-bold">Discord</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-16 px-8 border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">
-                        <i data-lucide="zap" class="text-[#FFD700] w-4 h-4"></i>
-                    </div>
-                    <span class="text-xl font-bold uppercase tracking-tighter">Badlion</span>
-                </div>
-                <p class="text-gray-600 text-sm italic">Not an official Minecraft product. Designed for players.</p>
-            </div>
-
-            <div class="flex gap-10 text-sm font-bold text-gray-500 uppercase tracking-widest">
-                <a href="#hero" class="hover:text-white transition-colors">Home</a>
-                <a href="#download" class="hover:text-white transition-colors">Download</a>
-                <a href="#" class="hover:text-white transition-colors">GitHub</a>
-            </div>
-
-            <div class="text-gray-600 text-xs text-center md:text-right">
-                &copy; 2026 BADLION LAUNCHER.<br>ALL RIGHTS RESERVED.
-            </div>
-        </div>
+    <footer>
+        <p>Copyright © 2026 Badlion Launcher</p>
     </footer>
-
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Initialize Animate On Scroll
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.onscroll = () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
-  </html>
-  
+</html>
