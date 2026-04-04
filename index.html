@@ -21,6 +21,11 @@
             background-color: #050b18;
             color: #ffffff;
             overflow-x: hidden;
+            /* Main Website Background */
+            background-image: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), url('homepage_background-0e47c69446e803c9d5d1c9e5fa2e33a2.webp');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
         }
 
         /* Glassmorphism */
@@ -103,10 +108,7 @@
         </div>
     </nav>
 
-    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-[url('image.png')] bg-cover bg-center opacity-20 scale-110"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#050b18] via-transparent to-[#050b18]"></div>
-
+    <section id="hero" class="relative h-screen flex items-center justify-center">
         <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
             <div class="float inline-block mb-6 px-4 py-1 rounded-full border border-[#FFD700]/30 bg-[#FFD700]/10 text-[#FFD700] text-xs font-bold tracking-widest uppercase">
                 Premium Minecraft Experience
@@ -124,6 +126,9 @@
                     <i data-lucide="smartphone"></i> Download APK
                 </a>
             </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
         </div>
     </section>
 
@@ -165,14 +170,14 @@
         </div>
     </section>
 
-    <section id="screenshots" class="py-32 bg-[#0A1F44]/20">
-        <div class="max-w-7xl mx-auto px-6">
+    <section id="screenshots" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Launcher <span class="text-[#FFD700]">Preview</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl" data-aos="zoom-in">
+                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass" data-aos="zoom-in">
                     <img src="image.png" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 1">
                 </div>
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl" data-aos="zoom-in" data-aos-delay="200">
+                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass" data-aos="zoom-in" data-aos-delay="200">
                     <img src="image-3.webp" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 2">
                 </div>
             </div>
@@ -195,7 +200,7 @@
         </div>
     </section>
 
-    <section id="community" class="py-32 border-y border-white/5">
+    <section id="community" class="py-32">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-12 uppercase italic">Join the Community</h2>
             <div class="flex flex-wrap justify-center gap-8">
@@ -217,7 +222,7 @@
         </div>
     </section>
 
-    <footer class="py-16 px-8 border-t border-white/5">
+    <footer class="py-16 px-8 border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="flex items-center gap-3">
                 <img src="badlion-logo.png" alt="Logo" class="w-6 h-6 object-contain opacity-50">
