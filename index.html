@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badlion Launcher | Next-Gen Minecraft</title>
+    <title>Cryonix Launcher | Next-Gen Minecraft</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -14,7 +14,8 @@
     <style>
         :root {
             --deep-blue: #0A1F44;
-            --neon-yellow: #FFD700;
+            --neon-green: #39FF14;
+            --neon-blue: #00E5FF;
         }
         body {
             font-family: 'Sora', sans-serif;
@@ -22,7 +23,7 @@
             color: #ffffff;
             overflow-x: hidden;
             /* Main Website Background */
-            background-image: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), url('homepage_background-0e47c69446e803c9d5d1c9e5fa2e33a2.webp');
+            background-image: linear-gradient(rgba(5, 11, 24, 0.85), rgba(5, 11, 24, 0.85)), url('homepage_background-0e47c69446e803c9d5d1c9e5fa2e33a2.webp');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -36,21 +37,21 @@
         }
 
         /* Glowing Effects */
-        .glow-yellow {
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        .glow-green {
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
             transition: all 0.3s ease;
         }
-        .glow-yellow:hover {
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+        .glow-green:hover {
+            box-shadow: 0 0 40px rgba(57, 255, 20, 0.7);
             transform: translateY(-3px);
         }
         .glow-blue-outline {
-            border: 2px solid #3b82f6;
-            box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.2);
+            border: 2px solid #00E5FF;
+            box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.2), 0 0 15px rgba(0, 229, 255, 0.2);
         }
         .glow-blue-outline:hover {
-            background: rgba(59, 130, 246, 0.1);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+            background: rgba(0, 229, 255, 0.1);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
         }
 
         /* Hero Animation */
@@ -65,7 +66,7 @@
 
         /* Gradient Text */
         .text-gradient {
-            background: linear-gradient(to right, #ffffff, #FFD700);
+            background: linear-gradient(to right, #00E5FF, #39FF14);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -75,12 +76,12 @@
             background: rgba(10, 31, 68, 0.95);
             padding-top: 1rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            border-bottom: 1px solid rgba(57, 255, 20, 0.2);
         }
         
         .logo-img {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             object-fit: contain;
         }
     </style>
@@ -90,79 +91,79 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-8 py-6">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="badlion-logo.png" alt="Logo" class="logo-img glow-yellow rounded-lg">
-                <span class="text-2xl font-extrabold tracking-tighter uppercase italic">Badlion Launcher</span>
+                <img src="file_000000002f0071fab280cf2ae6b36954.png" alt="Cryonix Logo" class="logo-img glow-green rounded-lg">
+                <span class="text-2xl font-extrabold tracking-tighter uppercase italic text-white">Cryonix</span>
             </div>
             
             <div class="hidden md:flex items-center gap-10 text-sm font-semibold uppercase tracking-widest">
-                <a href="#hero" class="hover:text-[#FFD700] transition-colors">Home</a>
-                <a href="#features" class="hover:text-[#FFD700] transition-colors">Features</a>
-                <a href="#screenshots" class="hover:text-[#FFD700] transition-colors">Screenshots</a>
-                <a href="#download" class="hover:text-[#FFD700] transition-colors">Download</a>
+                <a href="#hero" class="hover:text-[#39FF14] transition-colors">Home</a>
+                <a href="#features" class="hover:text-[#39FF14] transition-colors">Features</a>
+                <a href="#screenshots" class="hover:text-[#39FF14] transition-colors">Screenshots</a>
+                <a href="#download" class="hover:text-[#39FF14] transition-colors">Download</a>
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://youtube.com/@nekostrikesg?si=8S9UV6yqw45oSlNg" target="_blank" class="hover:text-[#FFD700] transition-transform hover:scale-110"><i data-lucide="youtube"></i></a>
-                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="hover:text-[#FFD700] transition-transform hover:scale-110"><i data-lucide="message-square"></i></a>
+                <a href="https://youtube.com/@nekostrikesg?si=8S9UV6yqw45oSlNg" target="_blank" class="hover:text-[#39FF14] transition-transform hover:scale-110"><i data-lucide="youtube"></i></a>
+                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="hover:text-[#39FF14] transition-transform hover:scale-110"><i data-lucide="message-square"></i></a>
             </div>
         </div>
     </nav>
 
     <section id="hero" class="relative h-screen flex items-center justify-center">
         <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
-            <div class="float inline-block mb-6 px-4 py-1 rounded-full border border-[#FFD700]/30 bg-[#FFD700]/10 text-[#FFD700] text-xs font-bold tracking-widest uppercase">
+            <div class="float inline-block mb-6 px-4 py-1 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] text-xs font-bold tracking-widest uppercase">
                 Premium Minecraft Experience
             </div>
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-gradient mb-4">BADLION LAUNCHER</h1>
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-gradient mb-4">CRYONIX</h1>
             <p class="text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-light tracking-wide">
                 Fast, clean and simple launcher for <span class="text-white font-semibold">Vanilla & Fabric</span>.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-[#FFD700] text-[#0A1F44] rounded-2xl font-extrabold text-lg glow-yellow flex items-center justify-center gap-3">
+                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-[#39FF14] text-[#0A1F44] rounded-2xl font-extrabold text-lg glow-green flex items-center justify-center gap-3">
                     <i data-lucide="download-cloud"></i> Download for PC
                 </a>
-                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-transparent text-white rounded-2xl font-extrabold text-lg glow-blue-outline flex items-center justify-center gap-3 transition-all">
+                <a href="#download" class="w-full sm:w-auto px-10 py-5 bg-transparent text-[#00E5FF] rounded-2xl font-extrabold text-lg glow-blue-outline flex items-center justify-center gap-3 transition-all">
                     <i data-lucide="smartphone"></i> Download APK
                 </a>
             </div>
         </div>
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+            <i data-lucide="chevron-down" class="text-[#00E5FF] w-8 h-8"></i>
         </div>
     </section>
 
     <section id="features" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-20" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Engineered for <span class="text-[#FFD700]">Speed</span></h2>
-            <div class="h-1 w-20 bg-[#FFD700] mx-auto rounded-full"></div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Engineered for <span class="text-[#39FF14]">Speed</span></h2>
+            <div class="h-1 w-20 bg-[#39FF14] mx-auto rounded-full"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-3xl hover:border-[#FFD700]/50 transition-all duration-500 group" data-aos="fade-right">
-                <div class="w-16 h-16 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="zap" class="text-[#FFD700] w-8 h-8"></i>
+            <div class="glass p-10 rounded-3xl hover:border-[#39FF14]/50 transition-all duration-500 group" data-aos="fade-right">
+                <div class="w-16 h-16 bg-[#39FF14]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <i data-lucide="zap" class="text-[#39FF14] w-8 h-8"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Fast Launcher</h3>
                 <p class="text-gray-400 leading-relaxed text-lg">Instant startup sequences and optimized game loading assets.</p>
             </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition-all duration-500 group" data-aos="fade-left">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="layout" class="text-blue-400 w-8 h-8"></i>
+            <div class="glass p-10 rounded-3xl hover:border-[#00E5FF]/50 transition-all duration-500 group" data-aos="fade-left">
+                <div class="w-16 h-16 bg-[#00E5FF]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <i data-lucide="layout" class="text-[#00E5FF] w-8 h-8"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Easy to Use</h3>
                 <p class="text-gray-400 leading-relaxed text-lg">A clean interface designed for professional players.</p>
             </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition-all duration-500 group" data-aos="fade-right">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="box" class="text-blue-400 w-8 h-8"></i>
+            <div class="glass p-10 rounded-3xl hover:border-[#00E5FF]/50 transition-all duration-500 group" data-aos="fade-right">
+                <div class="w-16 h-16 bg-[#00E5FF]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <i data-lucide="box" class="text-[#00E5FF] w-8 h-8"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Fabric Support</h3>
                 <p class="text-gray-400 leading-relaxed text-lg">Seamless integration for Fabric mods. Boost your FPS instantly.</p>
             </div>
-            <div class="glass p-10 rounded-3xl hover:border-[#FFD700]/50 transition-all duration-500 group" data-aos="fade-left">
-                <div class="w-16 h-16 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                    <i data-lucide="monitor" class="text-[#FFD700] w-8 h-8"></i>
+            <div class="glass p-10 rounded-3xl hover:border-[#39FF14]/50 transition-all duration-500 group" data-aos="fade-left">
+                <div class="w-16 h-16 bg-[#39FF14]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <i data-lucide="monitor" class="text-[#39FF14] w-8 h-8"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Cross Platform</h3>
                 <p class="text-gray-400 leading-relaxed text-lg">Available on Windows and Android APK.</p>
@@ -172,43 +173,46 @@
 
     <section id="screenshots" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Launcher <span class="text-[#FFD700]">Preview</span></h2>
+            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Launcher <span class="text-[#00E5FF]">Preview</span></h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass" data-aos="zoom-in">
-                    <img src="image.png" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 1">
+                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass hover:border-[#00E5FF]/50 transition-all duration-500" data-aos="zoom-in">
+                    <img src="image-5.webp" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 1">
                 </div>
-                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="image-3.webp" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 2">
+                <div class="overflow-hidden rounded-3xl border border-white/10 group shadow-2xl glass hover:border-[#39FF14]/50 transition-all duration-500" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="Screenshot_20260406_114929.jpg" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Launcher UI Preview 2">
                 </div>
             </div>
         </div>
     </section>
 
     <section id="download" class="py-32 text-center px-6">
-        <div class="max-w-3xl mx-auto glass p-16 rounded-[3rem] border-[#FFD700]/20" data-aos="flip-up">
-            <h2 class="text-5xl font-black mb-6 uppercase">Download Now</h2>
-            <p class="text-gray-400 mb-12 text-lg italic">"A minimal Minecraft launcher built for speed and simplicity."</p>
+        <div class="max-w-3xl mx-auto glass p-16 rounded-[3rem] border-[#00E5FF]/20 relative overflow-hidden" data-aos="flip-up">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/5 to-[#39FF14]/5 pointer-events-none"></div>
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <button class="px-12 py-5 bg-[#FFD700] text-[#0A1F44] rounded-2xl font-black text-xl glow-yellow transition-all uppercase tracking-tighter">
+            <h2 class="text-5xl font-black mb-6 uppercase relative z-10">Download Now</h2>
+            <p class="text-gray-400 mb-12 text-lg italic relative z-10">"A minimal Minecraft launcher built for speed and simplicity."</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+                <button class="px-12 py-5 bg-[#39FF14] text-[#0A1F44] rounded-2xl font-black text-xl glow-green transition-all uppercase tracking-tighter">
                     Windows
                 </button>
-                <button class="px-12 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-black text-xl hover:bg-white hover:text-black transition-all uppercase tracking-tighter">
+                <button class="px-12 py-5 bg-transparent border-2 border-[#00E5FF] text-[#00E5FF] rounded-2xl font-black text-xl hover:bg-[#00E5FF] hover:text-[#0A1F44] glow-blue-outline transition-all uppercase tracking-tighter">
                     Android APK
                 </button>
             </div>
 
-            <div class="mt-12 flex flex-col items-center justify-center border-t border-white/10 pt-10">
+            <div class="mt-12 flex flex-col items-center justify-center border-t border-white/10 pt-10 relative z-10">
                 <div class="relative">
                     <span class="absolute -top-4 -right-2 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse z-10 shadow-lg">Recommended</span>
-                    <a href="1.21 Mods (1).zip" class="inline-flex items-center gap-3 px-10 py-5 border-2 border-[#FFD700] bg-[#FFD700]/10 text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A1F44] rounded-2xl font-black text-xl glow-yellow transition-all uppercase tracking-tighter">
+                    <a href="1.21 Mods (1).zip" class="inline-flex items-center gap-3 px-10 py-5 border-2 border-[#39FF14] bg-[#39FF14]/10 text-[#39FF14] hover:bg-[#39FF14] hover:text-[#0A1F44] rounded-2xl font-black text-xl glow-green transition-all uppercase tracking-tighter">
                         <i data-lucide="zap" class="w-6 h-6"></i> 1.21.1 Mods (FPS Boost++)
                     </a>
                 </div>
                 <p class="mt-4 text-sm text-gray-400 italic">Optimized mods pack for better FPS and smoother gameplay.</p>
             </div>
 
-            <p class="mt-12 text-xs text-gray-500 uppercase tracking-widest">Free and lightweight launcher • Version 1.2.0</p>
+            <p class="mt-12 text-xs text-gray-500 uppercase tracking-widest relative z-10">Free and lightweight launcher • Version 1.2.0</p>
         </div>
     </section>
 
@@ -223,8 +227,8 @@
                         <span class="text-xl font-bold">YouTube</span>
                     </div>
                 </a>
-                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="glass px-10 py-6 rounded-3xl flex items-center gap-6 hover:border-indigo-500/50 transition-all group">
-                    <i data-lucide="message-square" class="w-10 h-10 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                <a href="https://discord.gg/9VCre5xpK" target="_blank" class="glass px-10 py-6 rounded-3xl flex items-center gap-6 hover:border-[#00E5FF]/50 transition-all group">
+                    <i data-lucide="message-square" class="w-10 h-10 text-[#00E5FF] group-hover:scale-110 transition-transform"></i>
                     <div class="text-left">
                         <span class="block text-xs text-gray-500 font-bold uppercase tracking-widest">Connect</span>
                         <span class="text-xl font-bold">Discord</span>
@@ -237,18 +241,18 @@
     <footer class="py-16 px-8 border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="flex items-center gap-3">
-                <img src="badlion-logo.png" alt="Logo" class="w-6 h-6 object-contain opacity-50">
-                <span class="text-xl font-bold uppercase tracking-tighter opacity-50">Badlion Client</span>
+                <img src="file_000000002f0071fab280cf2ae6b36954.png" alt="Cryonix Logo" class="w-6 h-6 object-contain opacity-50">
+                <span class="text-xl font-bold uppercase tracking-tighter opacity-50">Cryonix</span>
             </div>
 
             <div class="flex gap-10 text-sm font-bold text-gray-500 uppercase tracking-widest">
-                <a href="#hero" class="hover:text-white">Home</a>
-                <a href="#download" class="hover:text-white">Download</a>
-                <a href="#" class="hover:text-white">GitHub</a>
+                <a href="#hero" class="hover:text-[#00E5FF] transition-colors">Home</a>
+                <a href="#download" class="hover:text-[#00E5FF] transition-colors">Download</a>
+                <a href="#" class="hover:text-[#00E5FF] transition-colors">GitHub</a>
             </div>
 
             <div class="text-gray-600 text-xs text-center md:text-right">
-                &copy; 2026 BADLION LAUNCHER.<br>ALL RIGHTS RESERVED.
+                &copy; 2026 CRYONIX LAUNCHER.<br>ALL RIGHTS RESERVED.
             </div>
         </div>
     </footer>
@@ -267,5 +271,5 @@
         };
     </script>
 </body>
-            </html>
-                
+                        </html>
+                        
